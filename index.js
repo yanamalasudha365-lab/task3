@@ -1,4 +1,4 @@
-//Part 1: Variables and Data Types (5 Questions)
+ //Part 1: Variables and Data Types (5 Questions)
 //Declare variables using var, let, and const. Reassign and redeclare them wherever allowed, then print the results.
 var name="sudha";
 let age=21;
@@ -30,7 +30,7 @@ console.log(employee.role);
 console.log(employee.cgpa);
 //Take the user's name and age using prompt(). Display the name using alert() and print the age in the console.
 let username=prompt("enter your name");
-let userage=prompt("enter your age");
+let userage=Number(prompt("enter your age"));
 alert("your name is"+username);
 console.log("your age is"+userage);
 //Part 2: Operators (7 Questions)
@@ -75,7 +75,7 @@ console.log(x && y);
 console.log(x || y);
 console.log(!x);
 //Use the ternary operator to check whether a user's age is 18 or above and print an appropriate message.
-let userAge = prompt("Enter your age:");
+let userAge = Number(prompt("Enter your age:"));
 let message = (userAge >= 18) ? "You are eligible to vote." : "You are not eligible to vote.";
 console.log(message);
 //Part 3: Type Casting and Conditions (6 Questions)
@@ -98,9 +98,9 @@ let number1=prompt("enter your number");
 if(number1>0){
     console.log("The number is positive.");
 } else {
-    console.log("The number is not positive.");
+    console.log("The number is negative.");
 }//Use else-if to display a message based on the time entered by the user: early morning, morning, afternoon, evening, or night.
-let time=prompt("enter the time in 24-hour format (0-23)");
+let time=Number(prompt("enter the time in 24-hour format (0-23)"));
 if(time>=0 && time<6){
     console.log("It's early morning.");
 } else if(time>=6 && time<12){
@@ -115,9 +115,9 @@ if(time>=0 && time<6){
     console.log("Invalid time entered.");
 }
 //Create a nested if statement to check eligibility based on age, height, and weight, following the conditions in your code.
-let age2=prompt("enter your age");  
-let height=prompt("enter your height in cm");
-let weight=prompt("enter your weight in kg");
+let age2=Number(prompt("enter your age"));  
+let height=Number(prompt("enter your height in cm"));
+let weight=Number(prompt("enter your weight in kg"));
 if(age2>=18){
     if(height>=170){
         if(weight<=80){
@@ -221,6 +221,9 @@ for (let i = 0; i < numbers.length; i++) {
 let age6=Number(prompt("enter your age: "));
 if(age6>18){
     alert("you are eligible to watch the movie");
+}
+else {
+    alert("you are not eligible to watch the movie");
 }
  //Create a simple menu using switch with these options: addition, subtraction, multiplication, and division. Take two numbers from the user and display the selected operation's result.
  
